@@ -78,6 +78,12 @@ const GridRoot = React.forwardRef<HTMLDivElement, GridRootProps>(function GridRo
     setMountedState(true);
   }, []);
 
+  useEnhancedEffect(() => {
+    if (mountedState) {
+      apiRef.current.updateGridDimensionsRef();
+    }
+  }, [apiRef, mountedState]);
+
   if (!mountedState) {
     return null;
   }

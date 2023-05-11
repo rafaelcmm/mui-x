@@ -46,8 +46,4 @@ export interface GridDimensionsPrivateApi {
    * Forces a recalculation of all dimensions.
    */
   updateGridDimensionsRef: () => void;
-  /**
-   * Computes the size and publishes a `resize` event with the new value.
-   */
-  computeSizeAndPublishResizeEvent: () => void;
 }

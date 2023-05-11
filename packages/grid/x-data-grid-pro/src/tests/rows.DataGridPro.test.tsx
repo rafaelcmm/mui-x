@@ -426,7 +426,7 @@ describe('<DataGridPro /> - Rows', () => {
       });
       await act(() => Promise.resolve());
       clock.runToLast();
-      expect(getRows()).to.have.length(3);
+      expect(getRows()).to.have.length(4);
     });
 
     it('should render last row when scrolling to the bottom', () => {
